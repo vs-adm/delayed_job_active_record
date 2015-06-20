@@ -77,7 +77,6 @@ module Delayed
 
             # Quick and dirty fix to speedup on huge table UPDATE queries
             reserve_with_scope_using_default_sql(ready_scope, worker, now)
-            end
           when "MSSQL", "Teradata"
             # The MSSQL driver doesn't generate a limit clause when update_all
             # is called directly
